@@ -4,10 +4,16 @@ import "./index.css";
 import "./styles/main.css";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
+import { JobSearchProvider } from "./context/jobSearchContext";
+import { PaginationProvider } from "./context/paginationContext";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <PaginationProvider>
+      <JobSearchProvider>
+        <App />
+      </JobSearchProvider>
+    </PaginationProvider>
   </React.StrictMode>,
   document.getElementById("root")
 );
