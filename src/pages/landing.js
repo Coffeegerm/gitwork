@@ -1,13 +1,11 @@
 import React, { useState } from "react";
-import { Sidebar, Jobs } from "../components";
+import { Sidebar, Jobs, Page } from "../components";
 import { Pagination } from "../components/Pagination";
 
 export const Landing = () => {
   const [onlyFulltime, setOnlyFulltime] = useState(false);
   return (
-    <div className="container mx-auto">
-      <h1 className="mt-6 mb-2 text-black text-3xl">GitWork</h1>
-      <h1 className="mb-4 text-base text-gray-800 text-xl">Github Jobs</h1>
+    <Page>
       <div className="mb-4 mx-auto">
         <div className="flex flex-row">
           <input
@@ -30,6 +28,6 @@ export const Landing = () => {
           <Pagination />
         </div>
       </div>
-    </div>
+    </Page>
   );
 };
